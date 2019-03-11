@@ -1,0 +1,31 @@
+<div class="light-player">
+  <% if (acceptVideoType.test(type)) { %>
+  <video class="media-elem"></video>
+  <% } else if (acceptAudioType.test(type)) { %>
+  <audio class="media-elem"></audio>
+  <% } else { %>
+  <div class="unsupport-media-type">
+    不支持的媒体格式
+  </div>
+  <% } %>
+  <div class="controls-bar">
+    <div>
+      <img class="icon play-btn" src="<%= playIcon %>" />
+      <img class="icon pause-btn" src="<%= pauseIcon %>" />
+    </div>
+    <div class="processbar">
+      <div class="the-bar processbar-outer">
+        <div class="pointer processbar-pointer"></div>
+      </div>
+    </div>
+    <div id="time-display" class="time-display">
+      10:00:00 / 10:00:00
+    </div>
+    <img class="icon" src="<%= volumeIcon %>" />
+    <div class="sound-bar">
+      <div class="the-bar sound-bar-outer">
+        <div class="pointer sound-bar-pointer"></div>
+      </div>
+    </div>
+  </div>
+</div>
